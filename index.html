@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Imagem/jpg" href="assets/favicon.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +23,7 @@
             <div class="input-wrapper">
                 <input type="text" id="amigo" class="input-name" placeholder="Digite um nome">
                 <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
-            </div>
-           
+            </div>        
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
@@ -33,10 +33,13 @@
                     Sortear amigo
                 </button>
             </div>
+            <div class="button-container">
+                <button class="button-draw" onclick="resetarJogo()" aria-label="Reset game">Resetar Jogo</button>
+            </div>
         </section>
     </main>
 
     <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </html>
