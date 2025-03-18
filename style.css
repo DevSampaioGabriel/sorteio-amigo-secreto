@@ -1,10 +1,10 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #f5f5f5;
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
+    --color-button: rgba(219, 172, 15, 0.5);
+    --color-button-hover: rgba(0, 0, 0, 0.5);
+    --color-text: #f5f5f5;
     --color-white: #FFFFFF;
 }
 
@@ -17,7 +17,7 @@
 
 body {
     height: 100vh;
-    background-color: var(--color-primary);
+    background-image: url(assets/WhiteWallpaper.png) ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,8 +42,9 @@ body {
 /* Seção de entrada */
 .input-section {
     flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgb(192, 147, 0);
     border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
@@ -54,7 +55,7 @@ body {
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
+    font-size: 55px;
     font-family: "Merriweather", serif;
     font-weight: 900;
     font-style: italic;
@@ -82,7 +83,7 @@ body {
 .input-name {
     width: 100%;
     padding: 10px;
-    border: 2px solid #000;
+    border: 2px solid rgba(255, 233, 37, 1);;
     border-radius: 25px 0 0 25px;
     font-size: 16px;
 }
@@ -97,32 +98,37 @@ body {
     flex: 1;
     padding: 10px 15px;
     font-size: 16px;
-    border: 2px solid #333;
+    border: 2px solid rgb(248, 223, 0);
     border-right: none;
     border-radius: 25px 0 0 25px;
     font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
 }
 
 /* Estilos de botão */
 button {
+    color: var(--color-white);
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
-    border: 2px solid #000;
+    border: 2px solid rgba(0, 0, 0, 1);
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.4s;
     cursor: pointer;
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
+    background-color: var(--color-button);
+    transition: background 0.4s;
+    color: var(--color-white);
     border-radius: 0 25px 25px 0;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: var(--color-button-hover);
+    border: 2px solid rgb(182, 164, 7);
+    color: rgb(236, 184, 53);
 }
 
 /* Listas */
@@ -136,7 +142,7 @@ ul {
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: #ffe600;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
@@ -159,4 +165,5 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+    border: 2px solid rgb(182, 164, 7);
 }
